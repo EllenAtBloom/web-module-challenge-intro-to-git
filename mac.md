@@ -11,7 +11,7 @@ Now that you are all set up, it's time to learn a little more about the tools of
 4. What is the purpose of a Pull Request? 
 --> A pull request is the last checkpoint to compare various versions of a repository before merging them back into the main branch. It's like a check and balance: you can see all changes side by side and if there are any conflicts, decide which ones to keep and which to discard.
 5. What is the command you can use to switch between branches? For example you are working on FIRSTNAME-LASTNAME branch and you want to switch back to main. 
---> In terminal in your repository type: git checkout FIRSTNAME-LASTNAME
+--> In terminal in your repository type: git checkout main
 6. Explain the difference between `git fetch`, `git merge` and `git pull`. What does each command do?
 --> We use `git fetch` to pull down the file information from the original version but this command doesn't transfer any information to our local system. It's a way for us to know the status of the remote branch before we make decions about updating with a pull or a merge. `git merge` allows us to merge branches back together when we've finished making changes. `git pull` will not only pull down all of the file information like fetch, but it will also bring a copy of the changes from the remote repository.
 7. What is a merge conflict? 
