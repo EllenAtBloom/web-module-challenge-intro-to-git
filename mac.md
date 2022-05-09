@@ -2,11 +2,20 @@
 
 Now that you are all set up, it's time to learn a little more about the tools of the trade. Edit this file and answer the following questions. You are going to need to start familiarizing yourself with the [GitHub docs](https://docs.github.com/en). Docs (short for documentation) are the instructions on how to use a languge or program. A large part of your job as a developer will be learning how to read and work with documentation. Please reference the GitHub docs when answering the questions below. If you cannot find what you are looking for in the docs, you can always start to practice your Google skills!
 
-1. What is Git? Version control system.
+1. What is Git? 
+--> Git is an open source version control system that enables coders to complete three important tasks with their projects. First they can backup their work, second they can safely archive older versions, and third they can collaborate with other coders on the same project.
 2. What is the difference between Git and GitHub?
+--> Git is a tool used by developers to track their work while GitHub is a company that offers cloud-based Git hosting. It facilitates the usage of Git and provides a platform for collaboration and sharing of your work.
 3. Why do we create a branch? 
-4. What is the purpose of a Pull Request?
-5. What is the command you can use to switch between branches? For example you are working on FIRSTNAME-LASTNAME branch and you want to switch back to main.
+--> We create a branch so that our work/project doesn't interfere with or overwrite the work of others who may be making changes to the same files and/or projects. It is also important if we want to avoid our work in progress to be in a safe environment for testing. We can save our work separately and then compare the various changes before merging them all back into the main branch. We can also have multiple branches on our own system simultaneously where we try different versions.
+4. What is the purpose of a Pull Request? 
+--> A pull request is the last checkpoint to compare various versions of a repository before merging them back into the main branch. It's like a check and balance: you can see all changes side by side and if there are any conflicts, decide which ones to keep and which to discard.
+5. What is the command you can use to switch between branches? For example you are working on FIRSTNAME-LASTNAME branch and you want to switch back to main. 
+--> In terminal in your repository type: git checkout FIRSTNAME-LASTNAME
 6. Explain the difference between `git fetch`, `git merge` and `git pull`. What does each command do?
-7. What is a merge conflict?
-8. How do you resolve a merge conflict?
+--> We use `git fetch` to pull down the file information from the original version but this command doesn't transfer any information to our local system. It's a way for us to know the status of the remote branch before we make decions about updating with a pull or a merge. `git merge` allows us to merge branches back together when we've finished making changes. `git pull` will not only pull down all of the file information like fetch, but it will also bring a copy of the changes from the remote repository.
+7. What is a merge conflict? 
+--> This is when Git attempts to merge branches but discovers differences between the two commits that it cannot automatically resolve. One example would be when one person made edits to a file but another person deleted that file on their branch. 
+8. How do you resolve a merge conflict? This depends on the complexity of the merge conflict. Many times, the changes in a file are on different lines and files, which makes an automated merge process possible. In some more complex cases, it is possible to resolve them on github.com using the Resolve Conflicts button. This will give you the opportunity to either keep your branch's changes, keep only the other branch's changes, or incorporate both sets. Github will place conflict markers around each area that needs review and these must be deleted. Do this for each merge conflict that is listed and mark as resolved. Continue this process through all files in the repository with conflicts. After you've completed all these steps, you will have the option to either commit to your existing head branch or createa new one for this commit. 
+
+If the overall issues were more complex, you will need to resolve the merge conflict in a local clone of the repository and push the change to your branch on GitHub. This will require working in the command line. The workflow is similar to what was listed above. All merge conflicts on the command line must be resolved locally before you can push changes out to GitHub. After you have successully merged all branches on the command line or pushed your changes to your remote repository on GitHub, you can merge changes in a pull request.
